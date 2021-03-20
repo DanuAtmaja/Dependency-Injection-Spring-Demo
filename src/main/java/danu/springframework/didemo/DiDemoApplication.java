@@ -12,6 +12,8 @@ import org.springframework.context.ApplicationContext;
 public class DiDemoApplication {
 
     public static void main(String[] args) {
+        SpringApplication.run(LifeCycleDemoBean.class, args);
+
         ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 
         MyController controller = (MyController) ctx.getBean("myController");
@@ -20,6 +22,7 @@ public class DiDemoApplication {
         System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
         System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
         System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
+
     }
 
 }
