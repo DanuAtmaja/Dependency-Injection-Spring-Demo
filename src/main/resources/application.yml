@@ -1,0 +1,13 @@
+guru:
+  jms:
+    username: JMS username
+    password: somepass
+    dburl: somedburls
+
+---
+spring:
+  profiles: de
+
+guru:
+  jms:
+    username: JMS username $$$$$ German
